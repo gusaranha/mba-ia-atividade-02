@@ -35,7 +35,7 @@ def executar_pipeline():
     df = carregar_dados("data/clientes_campanha.csv")
     
     if df is None:
-        print("❌ ERRO: Dados não carregados. Complete TODO 1 em carregar.py")
+        print("  ❌ ERRO: Dados não carregados")
         return
     
     explorar_dados(df)
