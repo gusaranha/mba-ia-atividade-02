@@ -168,13 +168,20 @@ dados faltantes, etc podem gerar padrões falsos.
 ### 4.1 Liste os commits que vocês fizeram (copie do git log):
 <!-- Execute: git log --oneline e cole aqui -->
 ```
-(cole o output do git log aqui)
+ecec508 (HEAD -> main, origin/main, origin/HEAD) Respostas às questões
+0ca7d21 Treinamento dos dados e criação do modelo
+ae74f58 Validação dos dados do dataframe (ajustes no log)
+bc315b6 Validação dos dados do dataframe
+fdb814d Carregamento dos dados
+fc9e9fa Carregamento dos dados
+3837edf Estrutura inicial do projeto
+1d31db6 Initial commit
 ```
 
 ### 4.2 Por que mensagens de commit descritivas são importantes?
 <!-- Pense: se outra pessoa olhar o histórico, vai entender o que foi feito? -->
 
-
+Para poder entender o que foi feito e por que foi feito, além do que se trata cada commit/atualização/feature.
 
 ---
 
