@@ -17,10 +17,10 @@ def carregar_dados(caminho_arquivo):
     """
     try:
         df = pd.read_csv(caminho_arquivo)
-        print(f"  ✅ {len(df)} linhas carregadas")
+        print(f" ✅ {len(df)} linhas carregadas")
         return df
     except FileNotFoundError:
-        print(f"  ❌ Arquivo não encontrado: {caminho_arquivo}")
+        print(f" ❌ Arquivo não encontrado: {caminho_arquivo}")
         return None
 
 
@@ -54,6 +54,7 @@ def verificar_target(df, coluna_target='respondeu_campanha'):
     """
     print_header("DISTRIBUIÇÃO DO TARGET")
     print(df[coluna_target].value_counts())
+    print()
     print(df[coluna_target].value_counts(normalize=True))
     print()
 

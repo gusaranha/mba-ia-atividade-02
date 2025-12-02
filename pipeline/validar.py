@@ -40,15 +40,13 @@ def validar_dados(df):
         DataFrame validado (ou levanta exceção se inválido)
     """
     schema = criar_schema()
-    
-    print("Validando dados...")
-    
+
     try:
         df_validado = schema.validate(df)
-        print("✅ Dados válidos!")
+        print(" ✅ Dados válidos!")
         return df_validado
     except pa.errors.SchemaError as e:
-        print("❌ Dados inválidos!")
+        print(" ❌ Dados inválidos!")
         print(f"Erro: {e}")
         raise
 

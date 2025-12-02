@@ -23,9 +23,9 @@ def executar_pipeline():
     Executa o pipeline completo de ML.
     """
     
-    print("\n" + "🚀" * 20)
-    print("INICIANDO PIPELINE DE ML")
-    print("🚀" * 20 + "\n")
+    print("\n" + "🚀" * 25)
+    print(" INICIANDO PIPELINE DE ML")
+    print("🚀" * 25 + "\n")
     
     # =========================================
     # ETAPA 1: CARREGAR E EXPLORAR
@@ -61,13 +61,13 @@ def executar_pipeline():
     X, y = preparar_dados(df_validado)
     
     if X is None or y is None:
-        print("❌ ERRO: Dados não preparados. Complete TODOs 1-2 em treinar.py")
+        print(" ❌ ERRO: Dados não preparados")
         return
     
     X_train, X_test, y_train, y_test = dividir_treino_teste(X, y)
     
     if X_train is None:
-        print("❌ ERRO: Split não realizado. Complete TODO 3 em treinar.py")
+        print(" ❌ ERRO: Split não realizado")
         return
     
     modelo = treinar_modelo(X_train, y_train)
