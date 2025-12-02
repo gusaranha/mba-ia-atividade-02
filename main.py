@@ -35,7 +35,7 @@ def executar_pipeline():
     df = carregar_dados("data/clientes_campanha.csv")
     
     if df is None:
-        print("  ❌ ERRO: Dados não carregados")
+        print(" ❌ ERRO: Dados não carregados")
         return
     
     explorar_dados(df)
@@ -49,7 +49,7 @@ def executar_pipeline():
     try:
         df_validado = validar_dados(df)
     except Exception as e:
-        print(f"❌ ERRO na validação. Complete os TODOs em validar.py")
+        print(" ❌ ERRO na validação")
         print(f"Detalhes: {e}")
         return
     
