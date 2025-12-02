@@ -73,7 +73,7 @@ def executar_pipeline():
     modelo = treinar_modelo(X_train, y_train)
     
     if modelo is None:
-        print("❌ ERRO: Modelo não treinado. Complete TODOs 4-5 em treinar.py")
+        print(" ❌ ERRO: Modelo não treinado")
         return
     
     salvar_modelo(modelo)
