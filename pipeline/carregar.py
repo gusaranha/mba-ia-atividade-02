@@ -15,12 +15,13 @@ def carregar_dados(caminho_arquivo):
     Returns:
         DataFrame com os dados
     """
-    # TODO 1: Use pd.read_csv() para carregar o arquivo
-    # Dica: df = pd.read_csv(caminho_arquivo)
-    
-    df = None  # Substitua None pelo código correto
-    
-    return df
+    try:
+        df = pd.read_csv(caminho_arquivo)
+        print(f"  ✅ {len(df)} linhas carregadas")
+        return df
+    except FileNotFoundError:
+        print(f"  ❌ Arquivo não encontrado: {caminho_arquivo}")
+        return None
 
 
 def explorar_dados(df):
@@ -30,23 +31,17 @@ def explorar_dados(df):
     Args:
         df: DataFrame a ser explorado
     """
-    print("=" * 50)
-    print("EXPLORAÇÃO DOS DADOS")
-    print("=" * 50)
-    
-    # TODO 2: Mostre o shape do DataFrame (linhas, colunas)
-    # Dica: print(f"Shape: {df.shape}")
-    
-    
-    # TODO 3: Mostre os tipos de cada coluna
-    # Dica: print(df.dtypes)
-    
-    
-    # TODO 4: Mostre as 5 primeiras linhas
-    # Dica: print(df.head())
-    
-    
-    print("=" * 50)
+    print_header("EXPLORAÇÃO DOS DADOS")
+    print(f"Shape: {df.shape}")
+    print(f"Linhas (clientes): {df.shape[0]:,}")
+    print(f"Colunas (características): {df.shape[1]}")
+    print()
+    print("Detalhamento das colunas:")
+    print(df.dtypes)
+    print()
+    print("5 primeiros clientes:")
+    print(df.head())
+    print()
 
 
 def verificar_target(df, coluna_target='respondeu_campanha'):
@@ -57,19 +52,17 @@ def verificar_target(df, coluna_target='respondeu_campanha'):
         df: DataFrame
         coluna_target: nome da coluna target
     """
-    print("\nDISTRIBUIÇÃO DO TARGET")
-    print("-" * 30)
-    
-    # TODO 5: Mostre a contagem de cada valor do target
-    # Dica: print(df[coluna_target].value_counts())
-    
-    
-    # TODO 6: Mostre a proporção (percentual) de cada valor
-    # Dica: print(df[coluna_target].value_counts(normalize=True))
-    
-    
-    print("-" * 30)
+    print_header("DISTRIBUIÇÃO DO TARGET")
+    print(df[coluna_target].value_counts())
+    print(df[coluna_target].value_counts(normalize=True))
+    print()
 
+def print_header(header_text):
+    print()
+    print("=" * 50)
+    print(header_text)
+    print("=" * 50)
+    print()
 
 # Teste local (executar este arquivo diretamente)
 if __name__ == "__main__":
