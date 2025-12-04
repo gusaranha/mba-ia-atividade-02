@@ -133,14 +133,14 @@ mas não foram indicados - falsos negativos.
 ### 2.2 O dataset é balanceado ou desbalanceado? Como você descobriu?
 <!-- Dica: veja a proporção da variável target na exploração dos dados -->
 
-O dataset é levemente desbalanceado, pois 56% dos clientes responderam a campanha em contrapartida com
+O dataset é levemente desbalanceado, pois 56% dos clientes responderam à campanha. Em contrapartida,
 43,94% que não responderam. Mostrando um desequilíbrio entre os grupos.
 
 ### 2.3 Por que usamos F1-Score e não apenas Accuracy neste caso?
 <!-- Dica: pense no que aconteceria se o modelo previsse sempre 0 -->
 
-Porque a acurácia pode mostrar resultados errados com datasets desbalanceados. Se o modelo previsse que todos os clientes
-não responderiam a campanha, a acurácia teria sido alta, pois 56% dos clientes de fato não responderam.
+Porque a acurácia pode mostrar resultados errados com datasets desbalanceados. Por exemplo: se o modelo previsse que 
+todos os clientes não responderiam à campanha, a acurácia teria sido alta, pois 56% dos clientes de fato não responderam.
 
 ---
 
@@ -159,7 +159,7 @@ não responderiam a campanha, a acurácia teria sido alta, pois 56% dos clientes
 <!-- Pense no contexto de produção: o que aconteceria se dados inválidos entrassem no modelo? -->
 
 Porque dados inválidos podem prejudicar o modelo. Valores que não existem, valores fora do intervalo esperado, 
-dados faltantes, etc podem gerar padrões falsos.
+dados faltantes, etc podem gerar padrões falsos e equivocados que, consequentemente, prejudicariam a predição.
 
 ---
 
